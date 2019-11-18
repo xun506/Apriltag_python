@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{043c4077-de4c-4d24-9ff2-2ba33e42362e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>Apriltag_python.py</StartupFile>
+    <SearchPath>camtest\</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="apriltag.py" />
+    <Compile Include="Apriltag_python.py" />
+    <Compile Include="camtest\multCamDet.py" />
+    <Compile Include="camtest\testcam.py" />
+    <Compile Include="camtest\testMulPic.py" />
+    <Compile Include="camtest\vispytest.py" />
+    <Compile Include="multCamDet.py" />
+    <Compile Include="tagDetection.py" />
+    <Compile Include="tagFamilies.py" />
+    <Compile Include="tagUtils.py" />
+    <Compile Include="tagVisual.py" />
+    <Compile Include="testcam.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="camtest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
